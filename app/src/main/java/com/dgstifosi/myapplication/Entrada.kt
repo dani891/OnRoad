@@ -34,6 +34,8 @@ class Entrada : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Prueba control de versiones v1111
         // Acción de el boton crear nueva cuenta al hacer click
         botonregistro.setOnClickListener {
             val intent = Intent(this,Registro::class.java)
