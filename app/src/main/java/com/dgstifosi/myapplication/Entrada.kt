@@ -35,7 +35,7 @@ class Entrada : AppCompatActivity() {
             insets
         }
 
-        // Prueba control de versiones v1111
+        // Prueba control de versiones vers1
         // Acción de el boton crear nueva cuenta al hacer click
         botonregistro.setOnClickListener {
             val intent = Intent(this,Registro::class.java)
