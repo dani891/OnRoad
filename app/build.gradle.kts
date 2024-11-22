@@ -41,10 +41,11 @@ android {
         viewBinding = true
     }
     packagingOptions {
-        exclude("META-INF/LICENSE.md")
-        exclude("META-INF/LICENSE")
-        exclude("META-INF/NOTICE.md")
-        exclude("META-INF/NOTICE")
+        // Excluir archivos generales de recursos (como LICENSE.md, NOTICE.md)
+        resources.excludes.add("META-INF/LICENSE.md")
+        resources.excludes.add("META-INF/LICENSE")
+        resources.excludes.add("META-INF/NOTICE.md")
+        resources.excludes.add("META-INF/NOTICE")
     }
 }
 
