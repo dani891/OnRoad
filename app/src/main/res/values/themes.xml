@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base de la aplicación -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Personaliza tu tema aquí si es necesario -->
+    </style>
+
+    <!-- Tema para el Splash Screen -->
+    <style name="SplashScreenTheme" parent="Base.Theme.MyApplication">
+        <!-- Establecemos la imagen de fondo para el Splash -->
+        <item name="android:windowBackground">@drawable/carga2</item> <!-- Cambia a tu imagen -->
+
+    </style>
+
+    <!-- Tema principal de la aplicación -->
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+</resources>

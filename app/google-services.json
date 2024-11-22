@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "905946250316",
+    "project_id": "onroad-3c5da",
+    "storage_bucket": "onroad-3c5da.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905946250316:android:2ecc074c53cc08559ac8e9",
+        "android_client_info": {
+          "package_name": "com.dgstifosi.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCno4BgaxlbAlPua3pjkFkdGpEnUHZQxHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
