@@ -6,10 +6,12 @@ import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 
 
 class Entrada : AppCompatActivity() {
@@ -21,11 +23,25 @@ class Entrada : AppCompatActivity() {
     private lateinit var botonforgot:Button
     private lateinit var botonentrar:Button
 
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        // Verificar si el usuario está autenticado
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            // Si no hay usuario autenticado, redirigir al login
+            val intent = Intent(this, Entrada::class.java)
+            startActivity(intent)
+            finish() // Asegura que no pueda regresar a esta actividad sin estar autenticado
+            return
+        }
+
         setContentView(R.layout.activity_entrada)
+
+        auth = FirebaseAuth.getInstance()
 
         IniciarVariables()
 
@@ -48,16 +64,23 @@ class Entrada : AppCompatActivity() {
             startActivity(intent)
 
        }
-        // Acción de el boton inicio al hacer click
         botonentrar.setOnClickListener {
-            val intent = Intent(this,Hall::class.java)
-            startActivity(intent)
+            val email = editTextEmail.text.toString().trim()
+            val password = etPasswor.text.toString().trim()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                loginUser(email, password)
+            } else {
+                // Mostrar mensaje si alguno de los campos está vacío
+                Toast.makeText(this, "Por favor ingrese su correo y contraseña", Toast.LENGTH_SHORT).show()
+            }
         }
         //Accion del boton de visisvilidad
         botonvis.setOnClickListener {
             togglePasswordVisibility()
         }
     }
+
 
     private fun IniciarVariables() {
 
@@ -88,6 +111,22 @@ class Entrada : AppCompatActivity() {
 
     }
 
+    private fun loginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Inicio de sesión exitoso
+                    val user = auth.currentUser
+                    // Redirigir al usuario a la actividad principal
+                    val intent = Intent(this, Hall::class.java)
+                    startActivity(intent)
+                    finish() // Termina la actividad de login para que no pueda volver atrás
+                } else {
+                    // Si el inicio de sesión falla, muestra un mensaje de error
+                    Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
 }
 
 

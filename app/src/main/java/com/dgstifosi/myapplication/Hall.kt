@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.dgstifosi.myapplication.R.id.main
+import com.google.firebase.auth.FirebaseAuth
 
 
 class Hall : AppCompatActivity(){
@@ -27,6 +28,21 @@ class Hall : AppCompatActivity(){
             startActivity(intent)
 
         }
+        // Botón de cerrar sesión
+        val botonLogout = findViewById<Button>(R.id.butclose)
+        botonLogout.setOnClickListener {
+            logOutUser() // Llama a la función que cierra sesión
+        }
+    }
 
+    // Función para cerrar sesión
+    private fun logOutUser() {
+        // Cerrar sesión en Firebase
+        FirebaseAuth.getInstance().signOut()
+
+        // Redirigir al login después de cerrar sesión
+        val intent = Intent(this, Entrada::class.java)
+        startActivity(intent)
+        finish() // Asegura que no se pueda regresar a la actividad anterior
     }
 }
