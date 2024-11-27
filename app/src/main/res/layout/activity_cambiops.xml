@@ -8,82 +8,20 @@
     android:background="@color/black"
     tools:context=".Cambiops">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cambia tu contraseña"
+        android:layout_marginBottom="616dp"
+        android:text="Sube las fotos de tus viajes y comentalos"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.016" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/white"
-        android:ems="18"
-        android:hint="Escribe tu email"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/verificacion"
-        tools:layout_editor_absoluteX="-16dp" />
-
-    <EditText
-        android:id="@+id/verificacion"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/white"
-        android:ems="12"
-        android:hint="Escribe el codigo que te hemos enviado"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtPasswordN"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <EditText
-
-        android:id="@+id/txtPasswordN"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/white"
-        android:hint="Escribe tu nueva contraseña"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtPasswordRN"
-        tools:layout_editor_absoluteX="-16dp" />
-
-
-    <EditText
-        android:id="@+id/txtPasswordRN"
-        android:layout_width="415dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="76dp"
-        android:background="@color/white"
-        android:hint="Repite tu contraseña"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <ImageView
         android:id="@+id/imageView5"
@@ -92,10 +30,10 @@
         android:contentDescription="@drawable/fondo_foto_aplicacion_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
+        app:layout_constraintVertical_bias="0.325"
         app:srcCompat="@drawable/fondo_foto_aplicacion_2" />
 
     <Button
@@ -112,33 +50,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.991" />
-
-    <Button
-        android:id="@+id/Recuperarcontraseña"
-        android:layout_width="194dp"
-        android:layout_height="54dp"
-        android:text="Cambiar contraseña"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.396"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
-
-    <ImageButton
-        android:id="@+id/visibilityToggleButton"
-        android:layout_width="50dp"
-        android:layout_height="51dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="Mostrar/Ocultar contraseña"
-        android:src="@android:drawable/ic_menu_view"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.986" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

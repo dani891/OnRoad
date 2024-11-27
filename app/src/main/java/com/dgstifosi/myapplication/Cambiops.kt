@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 
 class Cambiops : AppCompatActivity() {
 
+    private lateinit var botonEntrada:Button
+
     //prueba control versiones
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
