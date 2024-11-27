@@ -25,7 +25,7 @@ class Registro : AppCompatActivity() {
     private lateinit var botonregistro :Button
     private lateinit var botonvis: ImageButton
 
-    private lateinit var Auth:FirebaseAuth
+    private lateinit var auth:FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
 
@@ -86,7 +86,7 @@ class Registro : AppCompatActivity() {
         botonregistro = findViewById<Button>(com.dgstifosi.myapplication.R.id.registro)
         etPasswordNu = findViewById<EditText>(com.dgstifosi.myapplication.R.id.txtPasswordR)
         etPasswordNuR = findViewById<EditText>(com.dgstifosi.myapplication.R.id.txtPasswordRR)
-        Auth= FirebaseAuth.getInstance()//Iniciamos Firebase Auth
+        auth= FirebaseAuth.getInstance()//Iniciamos Firebase Auth
         firestore = FirebaseFirestore.getInstance()  // Iniciamos Firestore
         storage = FirebaseStorage.getInstance()  // Iniciamos Storage
     }
@@ -120,10 +120,10 @@ class Registro : AppCompatActivity() {
     }
 
     private fun Registrarusuario(correo: String, contraseña: String, nombre: String) {
-        Auth.createUserWithEmailAndPassword(correo, contraseña)
+        auth.createUserWithEmailAndPassword(correo, contraseña)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    val user = Auth.currentUser
+                    val user = auth.currentUser
                     // Crear un documento en Firestore con los datos del usuario
                     val usuarioData = hashMapOf(
                         "nombre" to nombre,
