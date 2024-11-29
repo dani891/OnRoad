@@ -24,7 +24,7 @@
         android:id="@+id/Registro"
         android:layout_width="187dp"
         android:layout_height="81dp"
-        android:text="Registro de Usuario"
+        android:text="@string/registro_usuario"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -41,9 +41,10 @@
         android:id="@+id/txtFullName"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:autofillHints="text"
         android:background="@color/white"
         android:ems="18"
-        android:hint="Escribe tu nombre y apellidos"
+        android:hint="@string/hint_nombre"
         android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -52,7 +53,9 @@
         app:layout_constraintBottom_toTopOf="@+id/TxtEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/TxtEmailAddress"
@@ -60,7 +63,7 @@
         android:layout_height="40dp"
         android:background="@color/white"
         android:ems="12"
-        android:hint="Escribe tu email"
+        android:hint="@string/hint_email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -68,8 +71,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtPasswordR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Registro"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
 
@@ -77,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/white"
-        android:hint="Escribe tu contraseña"
+        android:hint="@string/error_contrasena_vacia"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -85,16 +90,17 @@
         app:layout_constraintBottom_toTopOf="@+id/txtPasswordRR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Registro"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
 
         android:id="@+id/txtPasswordRR"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginBottom="104dp"
         android:background="@color/white"
-        android:hint="Repite tu contraseña"
+        android:hint="@string/hint_repetir_contrasena"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -102,13 +108,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856" />
 
     <Button
         android:id="@+id/backLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/boton_login"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -124,7 +132,7 @@
         android:layout_width="106dp"
         android:layout_height="63dp"
         android:layout_marginBottom="28dp"
-        android:text="Enviar"
+        android:text="@string/boton_enviar"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"

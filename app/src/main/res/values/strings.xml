@@ -1,5 +1,26 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">OnRoad</string>
+
+    <!-- Títulos de actividades -->
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_navegador">Navegador</string>
+
+    <!-- Textos para el registro -->
+    <string name="registro_usuario">Registro de Usuario</string>
+    <string name="hint_nombre">Escribe tu nombre </string>
+    <string name="hint_email">Escribe tu email</string>
+    <string name="hint_contrasena">Escribe tu contraseña</string>
+    <string name="hint_repetir_contrasena">Repite tu contraseña</string>
+    <string name="boton_login">Login</string>
+    <string name="boton_enviar">Enviar</string>
+    <string name="error_email_vacio">Por favor, escribe el correo</string>
+    <string name="error_nombre_vacio">Por favor, escribe el Nombre</string>
+    <string name="error_contrasena_vacia">Por favor, escribe una contraseña</string>
+    <string name="error_repetir_contrasena_vacia">Por favor, repite una contraseña</string>
+    <string name="error_contrasena_no_coincide">Las contraseñas no coinciden</string>
+    <string name="usuario_registrado">Usuario registrado con éxito</string>
+    <string name="error_registro_usuario">Error al registrar el usuario</string>
+    <string name="error_guardar_datos">Error al guardar los datos: %1$s</string>
+    <string name="error_subir_foto">Error al subir la foto de perfil: %1$s</string>
 </resources>
