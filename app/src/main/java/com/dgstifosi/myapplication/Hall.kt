@@ -12,6 +12,8 @@ import com.dgstifosi.myapplication.R.id.main
 
 class Hall : AppCompatActivity(){
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,9 +23,18 @@ class Hall : AppCompatActivity(){
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
         val butonplan = findViewById<Button>(com.dgstifosi.myapplication.R.id.butplan)
         butonplan.setOnClickListener { // Acción al hacer clic
             val intent = Intent(this, Navegador::class.java)
+            startActivity(intent)
+
+        }
+
+        val butonperfil = findViewById<Button>(com.dgstifosi.myapplication.R.id.butper)
+        butonperfil.setOnClickListener { // Acción al hacer clic
+            val intent = Intent(this, Perfil::class.java)
             startActivity(intent)
 
         }

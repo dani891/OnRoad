@@ -11,16 +11,35 @@ interface OpenRouteServiceAPI {
         @Query("start") start: String,
         @Query("end") end: String
     ): Response<RouteResponse>
+    // Método para la búsqueda de direcciones (Geocoding)
+    @GET("geocode/search")
+    suspend fun searchAddress(
+        @Query("api_key") apiKey: String,
+        @Query("text") query: String
+    ): Response<AddressResponse>
+    }
 
+     data class AddressResponse(
+     val features: List<AddressFeature>
+     )
 
-    }data class RouteResponse(
-        val routes: List<Route>
+    data class AddressFeature(
+    val geometry: Geometry,
+    val properties: AddressProperties
+    )
+
+    data class AddressProperties(
+    val label: String  // Nombre o etiqueta de la dirección encontrada
+    )
+
+    data class RouteResponse(
+    val routes: List<Route>
     )
 
     data class Route(
-        val geometry: Geometry
+    val geometry: Geometry
     )
 
     data class Geometry(
-        val coordinates: List<List<Double>> // Lista de coordenadas [longitud, latitud]
+    val coordinates: List<List<Double>> // Lista de coordenadas [longitud, latitud]
     )

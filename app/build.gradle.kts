@@ -5,6 +5,7 @@ plugins {
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
 
+
 }
 
 android {
@@ -52,6 +53,8 @@ android {
 
 dependencies {
 
+
+    implementation(libs.androidx.activity.ktx)
     implementation(libs.realtimeDatabase)
     implementation(libs.androidx.core.ktx)
     implementation(libs.firebaseStore)
@@ -73,4 +76,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
