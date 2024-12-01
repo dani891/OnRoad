@@ -5,15 +5,40 @@
     <!-- Títulos de actividades -->
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_navegador">Navegador</string>
+    <string name="title_activity_perfil">Perfil</string>
+    <string name="title_activity_entrada">Entrada</string>
+    <string name="title_activity_hall">Hall</string>
+    <string name="title_activity_forgotpassword">Forgot-password</string>
+    <string name="title_activity_cambiops">Cambiops</string>
+    <string name="title_activity_registro">Registro</string>
 
-    <!-- Textos para el registro -->
-    <string name="registro_usuario">Registro de Usuario</string>
+    <!-- Textos para las actividades -->
+    <string name="titulo_potada">OnRoad</string>
+    <string name="titulo_hall">¿A donde vamos hoy?</string>
+    <string name="titulo_perfil">Gestiona tu perfil</string>
+    <string name="titulo_registro_usuario">Registro de Usuario</string>
+    <string name="titulo_forgotpassword">Ingresa tu correo para recuperar la contraseña</string>
+    <string name="titulo_cambiops">Sube las fotos de tus viajes y comentalos</string>
     <string name="hint_nombre">Escribe tu nombre </string>
     <string name="hint_email">Escribe tu email</string>
+    <string name="hint_direccion">Ingresa la direccion a la que deseas irl</string>
     <string name="hint_contrasena">Escribe tu contraseña</string>
     <string name="hint_repetir_contrasena">Repite tu contraseña</string>
+    <string name="hint_comentario">Añade un comentario sobre tu viaje</string>
+    <string name="boton_inicio">Inicio</string>
+    <string name="boton_recuperar">Recuperar contraseña</string>
+    <string name="boton_Ufoto">Subir imagen</string>
+    <string name="boton_foto">Seleccionar imagen</string>
     <string name="boton_login">Login</string>
+    <string name="boton_foto_perfil">Cambiar foto de perfil</string>
+    <string name="boton_gestionar_perfil">Gestionar perfil</string>
     <string name="boton_enviar">Enviar</string>
+    <string name="boton_registar">Crear nueva cuenta</string>
+    <string name="boton_viaje">Sube tu viaje</string>
+    <string name="boton_plan_ruta">Planificar tu nueva ruta</string>
+    <string name="boton_olvidar">¿Olvidaste tu contraseña?</string>
+    <string name="boton_ruta">Buscar ruta</string>
+    <string name="boton_mostrar_ocultar">Mostrar/Ocultar contraseña"</string>
     <string name="error_email_vacio">Por favor, escribe el correo</string>
     <string name="error_nombre_vacio">Por favor, escribe el Nombre</string>
     <string name="error_contrasena_vacia">Por favor, escribe una contraseña</string>
@@ -23,4 +48,6 @@
     <string name="error_registro_usuario">Error al registrar el usuario</string>
     <string name="error_guardar_datos">Error al guardar los datos: %1$s</string>
     <string name="error_subir_foto">Error al subir la foto de perfil: %1$s</string>
+
+
 </resources>

@@ -19,13 +19,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/titulo_potada" />
 
     <TextView
         android:id="@+id/Portada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OnRoad"
+        android:text="@string/titulo_potada"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -43,8 +44,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="83dp"
         android:ems="12"
-        android:hint="Escribe tu email"
-        android:inputType="text"
+        android:hint="@string/hint_email"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"
@@ -53,15 +53,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress" />
 
     <EditText
-
         android:id="@+id/txtPassword"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="12"
-        android:hint="Escribe tu contraseña"
+        android:hint="@string/hint_contrasena"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"
@@ -70,7 +71,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        android:inputType="textPassword"
+        android:autofillHints="password" />
 
     <Button
         android:id="@+id/buttonentrada"
@@ -78,7 +81,7 @@
         android:layout_height="76dp"
         android:layout_marginTop="216dp"
         android:backgroundTint="@color/black"
-        android:text="Inicio"
+        android:text="@string/boton_inicio"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tv_go_to_register"
@@ -92,7 +95,7 @@
         android:id="@+id/Btfp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿olvidaste tu contraseña?"
+        android:text="@string/boton_olvidar"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -105,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginBottom="9dp"
-        android:text="Crear nueva cuenta"
+        android:text="@string/boton_registar"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -120,7 +123,7 @@
         android:layout_width="59dp"
         android:layout_height="52dp"
         android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="Mostrar/Ocultar contraseña"
+        android:contentDescription="@string/boton_mostrar_ocultar"
         android:src="@android:drawable/ic_menu_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -2,6 +2,7 @@ package com.dgstifosi.myapplication
 
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -35,7 +36,18 @@ class Cambiops : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContentView(R.layout.activity_cambiops)
+
+        // Verificar si el usuario está autenticado
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            // Si el usuario no está autenticado, redirige a la actividad de entrada
+            val intent = Intent(this, Entrada::class.java)
+            startActivity(intent)
+            finish()
+            return  // Evita continuar con el flujo de la actividad
+        }
 
         // Ajustes de la interfaz para Edge-to-Edge
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -53,9 +65,18 @@ class Cambiops : AppCompatActivity() {
 
         // Abrir selector de imágenes
         btnImagen.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK)
-            intent.type = "image/*"
-            resultLauncher.launch(intent)
+            // Comprobar la versión del sistema operativo
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                // Android 14 y superior: Usar el flujo PhotoPicker
+                val photoPickerIntent = Intent(Intent.ACTION_PICK)
+                photoPickerIntent.type = "image/*" // Filtrar imágenes
+                resultLauncher.launch(photoPickerIntent)
+            } else {
+                // En versiones anteriores de Android, usar el intent clásico
+                val intent = Intent(Intent.ACTION_PICK)
+                intent.type = "image/*"
+                resultLauncher.launch(intent)
+            }
         }
 
         // Subir imagen y descripción a Firebase

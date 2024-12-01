@@ -18,13 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.186"
-        app:srcCompat="@drawable/_3" />
+        app:srcCompat="@drawable/_3"
+        android:contentDescription="@string/titulo_registro_usuario" />
 
     <TextView
         android:id="@+id/Registro"
         android:layout_width="187dp"
         android:layout_height="81dp"
-        android:text="@string/registro_usuario"
+        android:text="@string/titulo_registro_usuario"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -74,7 +75,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Registro"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:autofillHints="emailAddress" />
 
     <EditText
 
@@ -92,7 +94,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Registro"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:autofillHints="password"
+        android:inputType="textPassword" />
 
     <EditText
 
@@ -110,7 +114,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
+        app:layout_constraintVertical_bias="0.856"
+        android:autofillHints="password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/backLogin"
@@ -146,7 +152,7 @@
         android:layout_width="47dp"
         android:layout_height="49dp"
         android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="Mostrar/Ocultar contraseñas"
+        android:contentDescription="@string/boton_mostrar_ocultar"
         android:src="@android:drawable/ic_menu_view"
         app:layout_constraintBottom_toBottomOf="@+id/backLogin"
         app:layout_constraintEnd_toEndOf="parent"
