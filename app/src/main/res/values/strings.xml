@@ -38,6 +38,8 @@
     <string name="boton_plan_ruta">Planificar tu nueva ruta</string>
     <string name="boton_olvidar">¿Olvidaste tu contraseña?</string>
     <string name="boton_ruta">Buscar ruta</string>
+    <string name="boton_cerrar_sesion">Cerrar sesion</string>
+    <string name="boton_salir_perfil">Salir perfil</string>
     <string name="boton_mostrar_ocultar">Mostrar/Ocultar contraseña"</string>
     <string name="error_email_vacio">Por favor, escribe el correo</string>
     <string name="error_nombre_vacio">Por favor, escribe el Nombre</string>

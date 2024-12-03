@@ -33,6 +33,7 @@ class Entrada : AppCompatActivity() {
 
         setContentView(R.layout.activity_entrada)
 
+        // Iniciamos Firebase auth
         auth = FirebaseAuth.getInstance()
 
         IniciarVariables()
@@ -43,8 +44,8 @@ class Entrada : AppCompatActivity() {
             insets
         }
 
-        // Prueba control de versiones vers2
-        // Acción de el boton crear nueva cuenta al hacer click
+
+        // Acción deL boton crear nueva cuenta al hacer click
         botonregistro.setOnClickListener {
             val intent = Intent(this,Registro::class.java)
             startActivity(intent)
