@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,27 +14,41 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:context=".Navegador"
         tools:ignore="FragmentTagUsage" />
 
 
     <Button
         android:id="@+id/btnRuta"
-        android:layout_width="match_parent"
+        android:layout_width="239dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:text="@string/boton_ruta" />
-
+        android:text="@string/boton_ruta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
 
     <EditText
         android:id="@+id/buscadordir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="336dp"
+        android:layout_height="69dp"
+        android:autofillHints="postalAddress"
         android:background="@color/white"
         android:hint="@string/hint_direccion"
+        android:inputType="textPostalAddress"
         android:padding="16dp"
         android:textAlignment="center"
-        android:autofillHints="postalAddress"
-        android:inputType="textPostalAddress" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

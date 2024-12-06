@@ -65,21 +65,21 @@ class Cambiops : AppCompatActivity() {
 
         // Abrir selector de imágenes
         btnImagen.setOnClickListener {
-            // Comprobar la versión del sistema operativo
+            // Comprobamos la versión del sistema operativo
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                // Android 14 y superior: Usar el flujo PhotoPicker
+                // Flujo PhotoPicker
                 val photoPickerIntent = Intent(Intent.ACTION_PICK)
                 photoPickerIntent.type = "image/*" // Filtrar imágenes
                 resultLauncher.launch(photoPickerIntent)
             } else {
-                // En versiones anteriores de Android, usar el intent clásico
+                // Lnzamos un intent para acceder a la imagen
                 val intent = Intent(Intent.ACTION_PICK)
                 intent.type = "image/*"
                 resultLauncher.launch(intent)
             }
         }
 
-        // Subir imagen y descripción a Firebase
+        // Subimos imagen y descripción a Firebase
         btnSubir.setOnClickListener {
             val description = txtComentario.text.toString()
             if (selectedImageUri != null && description.isNotBlank()) {
@@ -89,7 +89,7 @@ class Cambiops : AppCompatActivity() {
             }
         }
 
-        // Volver al login (u otra actividad)
+        // Volvemos al login
         botonEntrada.setOnClickListener {
             val intent = Intent(this, Entrada::class.java)
             startActivity(intent)
@@ -97,7 +97,7 @@ class Cambiops : AppCompatActivity() {
         }
     }
 
-    // Manejo del resultado de la selección de imagen
+    // Manejamos del resultado de la selección de imagen
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
@@ -107,7 +107,7 @@ class Cambiops : AppCompatActivity() {
             }
         }
 
-    // Subir la imagen seleccionada a Firebase Storage
+    // Subimos la imagen seleccionada a Firebase Storage
     private fun uploadImageToFirebase(imageUri: Uri, description: String) {
         val userId = auth.currentUser?.uid ?: "unknown_user"
         val storageRef: StorageReference = storage.reference.child("images/$userId/${System.currentTimeMillis()}")
@@ -120,7 +120,7 @@ class Cambiops : AppCompatActivity() {
                     // Obtener la URL de la imagen subida
                     val imageUrl = uri.toString()
 
-                    // Subir la descripción junto con la URL de la imagen a Firestore
+                    // Subimos la descripción junto con la URL de la imagen a Firestore
                     val imageData = hashMapOf(
                         "imageUrl" to imageUrl,
                         "description" to description,

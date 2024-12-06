@@ -29,7 +29,7 @@ class Hall : AppCompatActivity(){
         val butoncerrar = findViewById<Button>(com.dgstifosi.myapplication.R.id.butclose)
         butoncerrar.setOnClickListener {
             // Cierra la sesión del usuario
-            auth.signOut()// Redirige al inicio (LoginActivity o pantalla principal)
+            auth.signOut()// Redirige al inicio 
             val intent = Intent(this, Entrada::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
